@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Quan Nguyen">
+        <title> JS Digital Clock | quangineer github </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="clock">
+            <div id="time">
+                <div><span id="hour">00</span><span>Hours</span></div>
+                <div><span id="min">00</span><span>Minutes</span></div>
+                <div><span id="sec">00</span><span>Seconds</span></div>
+            </div>
+        </div>
+
+        <script>
+            function clock(){
+                var hours=document.getElementById("hour");
+                var minutes=document.getElementById("min");
+                var seconds=document.getElementById("sec");
+
+                var h = new Date().getHours();
+                var m = new Date().getMinutes();
+                var s = new Date().getSeconds();
+
+                hours.innerHTML = h;
+                minutes.innerHTML = m;
+                seconds.innerHTML = s;
+            }
+
+            var interval = setInterval(clock, 700)
+        </script>
+    </body>
+</html>
